@@ -1,0 +1,1386 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*Common Across Site*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  padding: 70px 30px 20px 30px;
+  font-family: "Bungee Tint";
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px;
+  font-family: "Bungee Tint";
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 50px;
+    padding-top: 120px;
+  }
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+#bonusButton,
+#randomizationButton,
+#roughCalculatorButton,
+#blogButton,
+.unhideButton {
+  display: block;
+  margin: auto;
+}
+
+.generalButton {
+  border-radius: 20%;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  margin-top: 0;
+  transition: color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.generalButton:hover {
+  background-color: white;
+  color: blue;
+  box-shadow: 0 10px 10px -10px black;
+  transform: translateY(-10px);
+}
+
+.alertsParagraph,
+.mainParagraph {
+  font-size: 20px;
+  line-height: 40px;
+  font-family: "Roboto";
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 40px auto;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 30px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+textarea:focus,
+input:focus:not(#resultBox) {
+  outline: none;
+  border-color: blue;
+  box-shadow: 0 10px 10px -10px black;
+}
+
+/*Header Across Site*/
+
+header {
+  border-bottom: 2px solid black;
+  background-color: white;
+}
+
+header p {
+  padding: 15px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Bungee Tint";
+}
+
+/*Large Screen Navbar Across Site*/
+
+#menu {
+  background-color: white;
+}
+
+.topnavlg {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid black;
+  padding: 15px;
+  font-family: "Roboto";
+  gap: 40px;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+#header, #menu {
+  z-index: 100;
+}
+
+.stickynav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.start {
+  margin-left: 30px;
+  left: 0;
+  text-align: left;
+  position: absolute;
+  font-weight: bold;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+/*Large and Small Screen Navbar Links*/
+
+nav ul li a {
+  text-decoration: none;
+  color: red;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+/*Dropdown Burger*/
+
+.burger {
+  display: none;
+  width: 30px;
+  margin-left: 30px;
+  margin-top: 26px;
+  left: 0;
+  text-align: left;
+  position: absolute;
+}
+
+.burger button span {
+  width: 100%;
+  height: 5px;
+  background: #de3036;
+  border-radius: 5px;
+  left: 0;
+  position: absolute;
+}
+
+.burger span:nth-child(1) {
+  top: 0px;
+}
+
+.burger span:nth-child(2) {
+  top: 10px;
+}
+
+.burger span:nth-child(3) {
+  top: 20px;
+}
+
+.burgerMiddleAnimation1 {
+  animation: burgerMiddleAnimation1 1.5s ease-in-out forwards,
+    burgerMiddleFadeOut ease-in forwards 0.5s;
+}
+
+.burgerMiddleAnimation2 {
+  animation: burgerMiddleAnimation2 0.2s ease-in-out forwards,
+    burgerMiddleFadeIn ease-out forwards 1s;
+}
+
+@keyframes burgerMiddleAnimation1 {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes burgerMiddleAnimation2 {
+  from {
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes burgerMiddleFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes burgerMiddleFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.burgerTopAnimation1 {
+  animation: burgerTopAnimation1 0.2s ease-in-out forwards;
+}
+
+.burgerTopAnimation2 {
+  animation: burgerTopAnimation2 0.2s ease-in-out forwards;
+}
+
+@keyframes burgerTopAnimation1 {
+  from {
+    transform: rotate(0);
+    top: 0;
+  }
+
+  to {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+}
+
+@keyframes burgerTopAnimation2 {
+  from {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  to {
+    transform: rotate(0);
+    top: 0;
+  }
+}
+
+.burgerBottomAnimation1 {
+  animation: burgerBottomAnimation1 0.2s ease-in-out forwards;
+}
+
+.burgerBottomAnimation2 {
+  animation: burgerBottomAnimation2 0.2s ease-in-out forwards;
+}
+
+@keyframes burgerBottomAnimation1 {
+  from {
+    transform: rotate(0);
+    top: 0;
+  }
+
+  to {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+}
+
+@keyframes burgerBottomAnimation2 {
+  from {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+
+  to {
+    transform: rotate(0);
+    top: 20px;
+  }
+}
+
+/*Navbar Dropdown*/
+
+.dropdownnav {
+  display: none;
+}
+
+.dropdownsm {
+  display: flex block;
+  flex-direction: column;
+  position: fixed;
+  top: 78px;
+  gap: 30px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 200px;
+  height: 100%;
+  font-family: "Roboto";
+  background-color: white;
+  z-index: 1;
+  padding: 30px;
+  list-style-type: none;
+  animation: navAnimation1 0.2s ease-in-out forwards;
+}
+
+.dropdownsm2 {
+  display: flex block;
+  flex-direction: column;
+  position: fixed;
+  top: 78px;
+  gap: 30px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 200px;
+  height: 100%;
+  font-family: "Roboto";
+  background-color: white;
+  z-index: 1;
+  padding: 30px;
+  list-style-type: none;
+  animation: navAnimation2 0.2s ease-in-out forwards;
+}
+
+@keyframes navAnimation1 {
+  from {
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navAnimation2 {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+.dropdownsm2 li,
+.dropdownsm li {
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+/*Resonpsive Nav and Header Code*/
+
+@media (max-width: 1200px) {
+  .topnavlg {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 901px) {
+  .dropdownsm {
+    display: none;
+  }
+}
+
+/*Footer Across Site*/
+
+footer>ul {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Roboto";
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+footer>ul>li>a {
+  text-decoration: none;
+  color: red;
+}
+
+footer>ul>li>a:hover {
+  color: black;
+}
+
+footer>p {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  background-color: white;
+}
+
+footer>a>svg {
+  padding: 20px;
+}
+
+footer>a:nth-of-type(1) {
+  color: blue;
+}
+
+footer>a:nth-of-type(2) {
+  color: blue;
+}
+
+footer>a:nth-of-type(3) {
+  color: rgb(12, 199, 237);
+}
+
+footer>a:nth-of-type(4) {
+  color: red;
+}
+
+footer>a:nth-of-type(5) {
+  color: black;
+}
+
+footer>a:nth-of-type(6) {
+  color: black;
+}
+
+@media (max-width: 600px) {
+  footer>ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  footer>ul>p {
+    display: none;
+  }
+
+  footer>ul>li {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    width: 200px;
+  }
+}
+
+/*Home Page Main*/
+
+#centerhomepage p {
+  font-size: 80px;
+  font-family: "Bungee Tint";
+}
+
+#centerhomepage {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.word1 {
+  animation: moveText 0.5s linear;
+  position: relative;
+  z-index: -1;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateY(-1500px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.word2 {
+  animation: moveText2 1s linear;
+}
+
+@keyframes moveText2 {
+  from {
+    transform: translateX(-2000px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.word3 {
+  animation: moveText3 1.5s linear;
+  position: relative;
+  z-index: -1;
+}
+
+@keyframes moveText3 {
+  from {
+    transform: translateY(2500px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 725px) {
+  #centerhomepage p {
+    font-size: 50px;
+  }
+}
+
+/*Rough Calculator*/
+
+.equationLabel {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+#roughCalculatorButton,
+#roughCalculatorSubmit {
+  margin-bottom: 40px;
+}
+
+.equationInput {
+  width: 100%;
+  height: 20px;
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.equationParagraphWrapping {
+  margin-bottom: 25px;
+  width: 40%;
+}
+
+.threeInputWrapping {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*Calculator*/
+
+.calculatorGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 200px;
+  gap: 10px;
+  top: 30px;
+  margin: 50px auto 50px auto;
+  font-size: 30px;
+  font-family: "Roboto";
+  text-align: center;
+  background-color: grey;
+  padding: 30px;
+  border: 5px solid black;
+  border-radius: 15%;
+}
+
+.calculatorButton {
+  font-size: 30px;
+}
+
+.calculatorGrid>*:not(#resultBox):hover {
+  filter: brightness(1.5);
+  color: rgb(247, 238, 190);
+  background-color: rgb(45, 45, 45);
+}
+
+#resultBox {
+  grid-column: span 4;
+  background-color: white;
+  font-size: 25px;
+  padding-left: 3px;
+}
+
+#equalsButton {
+  grid-column: span 4;
+  font-size: 30px;
+}
+
+#clearButton {
+  grid-column: span 2;
+  font-size: 30px;
+}
+
+.calculatorGrid>* {
+  border: 1px solid black;
+  gap: 10px;
+}
+
+.calculatorGrid>*:not(#resultBox) {
+  color: white;
+  background-color: black;
+  border-radius: 15%;
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+}
+
+.calculatorButton:active {
+  box-shadow: 0 3px 4px 0 #dbedf3;
+  opacity: 0.5;
+  background-color: red !important;
+}
+
+/*Randomization*/
+
+.randomizationGeneralContainer {
+  width: 80%;
+  margin: auto auto 50px auto;
+  text-align: center;
+  display: none;
+}
+
+.randomizationGeneralContainerDisplayOn {
+  display: block;
+}
+
+.actualRandomizationImage {
+  margin: 5px;
+  width: 45%;
+}
+
+#randomizationHeadline {
+  font-size: 30px;
+  font-family: "Roboto";
+  margin: 30px auto 10px auto;
+}
+
+/*Playing Sounds*/
+
+.movieImages {
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+
+.moviePoster {
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
+}
+
+.moviePosterWrapping>button {
+  border: none;
+  border-style: none;
+}
+
+.moviePosterWrapping>button>img {
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.moviePosterWrapping>button>img:hover {
+  filter: brightness(1.5);
+  opacity: 0.75;
+  box-shadow: 5px 10px 15px 5px black;
+  transform: translateY(-10px);
+}
+
+.moviePosterWrapping {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  width: 15%;
+  padding: 1.5%;
+  vertical-align: top;
+}
+
+.moviePosterWrapping>p {
+  font-size: 20px;
+  font-family: "Roboto";
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
+  word-break: break-all;
+}
+
+.moviePosterWrapping>p>span {
+  color: red;
+}
+
+.moviePosterAnimation {
+  opacity: 0.25;
+  background-color: red;
+}
+
+/*Blog*/
+
+.blogTextArea {
+  height: 250px;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 30px;
+  border: 5px solid black;
+}
+
+.wordCountContainer {
+  position: relative;
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+
+.wordCount {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  font-size: 20px;
+  color: red;
+}
+
+#blogButton {
+  margin: 50px auto 50px auto;
+}
+
+.mainParagraph {
+  margin-top: 50px;
+  text-align: left;
+  position: relative;
+}
+
+.paragraphContainer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.dateFix {
+  font-size: 15px;
+}
+
+.deleteButton {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  right: 30px;
+  top: 43px;
+  position: absolute;
+  /*Make sure to set parent to relative!*/
+}
+
+.hideButton {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  right: 110px;
+  top: 43px;
+  position: absolute;
+  /*Make sure to set parent to relative!*/
+}
+
+.hideAll {
+  display: none !important;
+}
+
+.unhideButton {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.paragraphContainer>span>p>button>svg {
+  fill: blue;
+  width: 20px;
+}
+
+.thumbsUp {
+  position: absolute;
+  left: 2px;
+}
+
+.likeButton,
+.dislikeButton,
+.commentButton {
+  background-color: rgb(225, 222, 222);
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 90%;
+}
+
+.likeButton {
+  padding-left: 23px;
+  position: relative;
+}
+
+.likeCountSpan,
+.dislikeCountSpan {
+  font-size: 20px;
+}
+
+.likeButtonAnimation {
+  animation: likeButtonAnimationClick 0.5s ease-in-out forwards;
+}
+
+@keyframes likeButtonAnimationClick {
+  from {
+    width: 20px;
+    transform: rotate(0);
+  }
+
+  to {
+    width: 25px;
+    transform: rotate(-45deg);
+  }
+
+  from {
+    width: 25px;
+    transform: rotate(-45deg);
+  }
+
+  to {
+    width: 20px;
+    transform: rotate(0);
+  }
+}
+
+.actualParagraph {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 27px;
+}
+
+.bottomLine {
+  font-size: 15px;
+}
+
+.deleteButton {
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  right: 30px;
+  top: 43px;
+  position: absolute;
+  /*Make sure to set parent to relative!*/
+}
+
+.commentLine {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.commentBox {
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 90%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color: rgb(218, 215, 215);
+}
+
+.commentContainer>span {
+  display: block;
+}
+
+.deleteCommentButton {
+  border: none;
+  background-color: rgb(218, 215, 215);
+  font-size: 15px;
+  right: 8px;
+  top: 12px;
+  position: absolute;
+  /*Make sure to set parent to relative!*/
+}
+
+.commentWhole {
+  position: relative;
+  background-color: rgb(218, 215, 215);
+  border-radius: 10%;
+  border: 1px solid black;
+  padding: 10px;
+  line-height: 22px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.commentActualParagraph {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.commentContainer>span>button {
+  display: inline-block;
+}
+
+.commentContainer>span>p>button>svg {
+  fill: blue;
+  width: 15px;
+}
+
+.likeCommentButton,
+.dislikeCommentButton,
+.replyCommentButton {
+  background-color: rgb(225, 222, 222);
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 30%;
+}
+
+.commentReplyBox {
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+  margin: 10px 0 10px auto;
+  width: 80%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color: rgb(218, 215, 215);
+}
+
+.commentReplyWhole {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 10px;
+  background-color: rgb(218, 215, 215);
+  border-radius: 10%;
+  border: 1px solid black;
+  padding: 10px;
+  line-height: 22px;
+  font-size: 17px;
+}
+
+.commentActualReplyParagraph {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.deleteCommentReplyButton {
+  border: none;
+  background-color: rgb(218, 215, 215);
+  font-size: 15px;
+  right: 8px;
+  top: 12px;
+  position: absolute;
+  /*Make sure to set parent to relative!*/
+}
+
+.likeCommentReplyButton,
+.dislikeCommentReplyButton,
+.replyCommentReplyButton {
+  background-color: rgb(225, 222, 222);
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 30%;
+}
+
+.commentReplyContainer>span>p>button>svg {
+  fill: blue;
+  width: 15px;
+}
+
+.commentReplyContainer2>span>p>button>svg {
+  fill: blue;
+  width: 15px;
+}
+
+/*E-Commerce*/
+
+.shoppingCartButton {
+  position: absolute;
+  right: 0;
+  top: -31px;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
+
+.shoppingCart {
+  fill: blue;
+  width: 25px;
+}
+
+.multipleItemContainer {
+  width: 50%;
+  display: block;
+  margin: 30px auto 100px auto;
+  position: relative;
+
+}
+
+.itemContainer {
+  border: 1px solid black;
+  display: flex;
+  font-family: "Roboto";
+  height: 200px;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.pageButton {
+  text-decoration: none;
+  color: black;
+}
+
+.shoppingCartButton {
+  font-family: "Roboto";
+}
+
+.addToCart {
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 15%;
+  padding: 5px;
+  background-color: rgb(228, 218, 218);
+  margin-top: 10px;
+  display: block;
+  width: 50%;
+}
+
+.descriptionContainer {
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .multipleItemContainer {
+    width: 90%;
+  }
+}
+
+.title {
+  font-weight: bold;
+}
+
+.amount {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.closePageContainer {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closePage {
+  position: absolute;
+  top: 20px;
+  right: 140px;
+  font-weight: bold;
+  font-family: "Roboto";
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10%;
+  background-color: rgb(228, 218, 218);
+}
+
+.pageRelative {
+  position: relative;
+}
+
+.generalContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 5px 10px 15px 5px black;
+}
+
+.fixedHeightContainer {
+  height: 100vh;
+}
+
+.generalPage {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pageImage {
+  margin-right: 5%;
+}
+
+.generalDescription {
+  font-size: 20px;
+  margin-top: 10%;
+  font-family: "Roboto";
+}
+
+@media (max-width: 1300px) {
+  .closePage {
+    right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .addToCart {
+    width: 75%;
+  }
+
+  .generalPage {
+    height: 300px;
+  }
+
+  .generalDescription {
+    font-size: 15px;
+  }
+
+  .closePage {
+    font-size: 10px;
+  }
+}
+
+.cartItemsContainer>span {
+  border: 1px solid black;
+  display: flex;
+  font-family: "Roboto";
+  height: 200px;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.shoppingCartItems {
+  width: 80%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+}
+
+#shoppingCartPage {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.dollars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid black;
+  font-family: "Roboto";
+  padding: 10px;
+  height: 200px;
+  justify-content: center;
+}
+
+.itemsPurchased {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 25px;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-break: break-all;
+}
+
+.addSubtractButton {
+  border: 1px solid black;
+  padding: 3px;
+  width: 10px;
+}
+
+@media (max-width: 825px) {
+  .shoppingCartItems {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 200px;
+  }
+
+  .cartItemsContainer>span {
+    font-size: 12px;
+  }
+}
+
+.checkoutButton {
+  width: 64px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+
+  border: 1px solid black;
+  background-color: blue;
+  border-radius: 20%;
+}
+
+.grandTotal {
+  font-size: 30px;
+  font-family: "Roboto";
+  text-align: center;
+  font-weight: bold;
+  margin: auto 10px 60px 10px;
+  color: red;
+}
+
+.checkoutForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: auto auto 60px auto;
+  width: 50%;
+}
+
+.checkoutLabel {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+.checkoutInput {
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+#my-dropdown {
+  height: 35px;
+}
+
+.thankYouParagraph {
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.thankYouFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Contact-About*/
+
+.contactflex {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 20px;
+  margin-bottom: 60px;
+  margin-left: 20px;
+  font-family: "Roboto";
+}
+
+.contactform {
+  padding: 20px;
+}
+
+.contactInput {
+  width: 80%;
+  height: 20px;
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.contactLabel {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+.contactTextArea {
+  width: 80%;
+  height: 180px;
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.contactsetup {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.contactp a {
+  text-decoration: none;
+}
+
+.contactform p:not(.textarea) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 820px) {
+  .contacth1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .contactp {
+    font-size: 20px;
+    margin: 0 30px 0 30px;
+  }
+
+  .contactsetup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactInput,
+  .contactTextArea {
+    width: 100%;
+  }
+
+  .contactflex {
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+}
