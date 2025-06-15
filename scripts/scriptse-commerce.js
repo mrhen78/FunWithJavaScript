@@ -121,8 +121,6 @@ document
         "Currently out of stock.  Please check back at a later date.";
       document.querySelector(".leftBehindStockItems").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     }
 
     if (numberOfLeftBehind <= 10 && numberOfLeftBehind >= 2) {
@@ -144,8 +142,6 @@ document
       document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
       document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
       document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     } else {
       document.querySelector(".leftBehindStockPage").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
@@ -189,10 +185,6 @@ document
             numberOfLeftBehind;
           document.querySelector(".amountLeftLeftBehindItems").innerHTML =
             numberOfLeftBehind;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".leftBehindStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -235,10 +227,6 @@ document
             numberOfLeftBehind;
           document.querySelector(".amountLeftLeftBehindItems").innerHTML =
             numberOfLeftBehind;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".leftBehindStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -265,9 +253,6 @@ document
     document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
     document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
     document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-
-    document.querySelector(".grandTotal").innerHTML =
-      "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
   });
 
 /*Add Holding To Cart*/
@@ -325,8 +310,6 @@ document
         "Currently out of stock.  Please check back at a later date.";
       document.querySelector(".holdingStockItems").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     }
 
     if (numberOfHolding <= 10 && numberOfHolding >= 2) {
@@ -348,8 +331,6 @@ document
       document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
       document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
       document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     }
 
     document
@@ -388,10 +369,6 @@ document
             numberOfHolding;
           document.querySelector(".amountLeftHoldingItems").innerHTML =
             numberOfHolding;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".holdingStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -434,10 +411,6 @@ document
             numberOfHolding;
           document.querySelector(".amountLeftHoldingItems").innerHTML =
             numberOfHolding;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".holdingStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -463,9 +436,6 @@ document
     document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
     document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
     document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-
-    document.querySelector(".grandTotal").innerHTML =
-      "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
   });
 
 /*Add Server to Cart*/
@@ -523,8 +493,6 @@ document
         "Currently out of stock.  Please check back at a later date.";
       document.querySelector(".serverStockItems").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     }
 
     if (numberOfServer <= 5 && numberOfServer >= 2) {
@@ -546,8 +514,6 @@ document
       document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
       document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
       document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     } else {
       document.querySelector(".serverStockPage").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
@@ -591,10 +557,6 @@ document
             numberOfServer;
           document.querySelector(".amountLeftServerItems").innerHTML =
             numberOfServer;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".serverStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -637,9 +599,6 @@ document
             numberOfServer;
           document.querySelector(".amountLeftServerItems").innerHTML =
             numberOfServer;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" + grandTotalOfPrice.toFixed(2);
-          +". Please pay here.";
         } else {
           document.querySelector(".serverStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -664,9 +623,6 @@ document
     document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
     document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
     document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-
-    document.querySelector(".grandTotal").innerHTML =
-      "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
   });
 
 /*Add Thinker to Cart*/
@@ -724,8 +680,6 @@ document
         "Currently out of stock.  Please check back at a later date.";
       document.querySelector(".thinkerStockItems").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     }
 
     if (numberOfThinker <= 20 && numberOfThinker >= 2) {
@@ -747,8 +701,6 @@ document
       document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
       document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
       document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-      document.querySelector(".grandTotal").innerHTML =
-        "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
     } else {
       document.querySelector(".thinkerStockPage").innerHTML =
         "Currently out of stock.  Please check back at a later date.";
@@ -792,10 +744,6 @@ document
             numberOfThinker;
           document.querySelector(".amountLeftThinkerItems").innerHTML =
             numberOfThinker;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".thinkerStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -838,10 +786,6 @@ document
             numberOfThinker;
           document.querySelector(".amountLeftThinkerItems").innerHTML =
             numberOfThinker;
-          document.querySelector(".grandTotal").innerHTML =
-            "Your total is $" +
-            grandTotalOfPrice.toFixed(2) +
-            ". Please pay here.";
         } else {
           document.querySelector(".thinkerStockPage").innerHTML =
             "Currently out of stock.  Please check back at a later date.";
@@ -868,9 +812,6 @@ document
     document.querySelector(".shippingAmount").innerHTML = shipping.toFixed(2);
     document.querySelector(".taxAmount").innerHTML = calculatedTax.toFixed(2);
     document.querySelector(".total").innerHTML = grandTotalOfPrice.toFixed(2);
-
-    document.querySelector(".grandTotal").innerHTML =
-      "Your total is $" + grandTotalOfPrice.toFixed(2) + ". Please pay here.";
   });
 
 /*Checkout Button Open and Close*/
