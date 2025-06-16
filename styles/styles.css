@@ -382,12 +382,6 @@ nav ul li a:hover {
   }
 }
 
-@media (min-width: 901px) {
-  .dropdownsm {
-    display: none;
-  }
-}
-
 /*Footer Across Site*/
 
 footer>ul {
