@@ -364,7 +364,7 @@ nav ul li a:hover {
   padding-bottom: 10px;
 }
 
-/*Resonpsive Nav and Header Code*/
+/*Responsive Nav and Header Code*/
 
 @media (max-width: 1200px) {
   .topnavlg {
@@ -381,7 +381,11 @@ nav ul li a:hover {
     z-index: 1;
   }
 }
-
+@media (min-width: 1200px) {
+  .dropdownsm {
+    display: none;
+  }
+}
 /*Footer Across Site*/
 
 footer>ul {
