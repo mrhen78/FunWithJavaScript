@@ -879,6 +879,36 @@ footer>a:nth-of-type(6) {
   /*Make sure to set parent to relative!*/
 }
 
+@media (max-width: 500px) {
+  .deleteButton {
+    font-size: 10px !important;
+    right: 30px;
+    top: 47px !important;
+  }
+  .hideButton {
+    font-size: 10px !important;
+    right: 80px;
+    top: 47px;
+  }
+  .bottomLine {
+    font-size: 10px;
+  }
+  .paragraphContainer > span > p > button > svg {
+    fill: blue;
+    width: 15px !important;
+  }
+  .likeCountSpan,
+  .dislikeCountSpan {
+    font-size: 12px !important;
+  }
+ .likeButton {
+  padding-left: 18px;
+} 
+.dateFix {
+  font-size: 12px;
+}
+}
+
 .commentLine {
   display: inline-block;
   padding-top: 20px;
